@@ -48,7 +48,7 @@ public class TorpedoStore {
       // simulated failure
       success = false;
     }
-
+    
     return success;
   }
 
