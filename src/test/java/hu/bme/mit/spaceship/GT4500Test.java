@@ -29,11 +29,14 @@ public class GT4500Test {
     ship.fireTorpedo(FiringMode.SINGLE);
 
     // Assert
-    if (ship.wasPrimaryFiredLast) {
+    /*if (ship.wasPrimaryFiredLast) {
         verify(primaryStore, times(1)).fire(1);
     } else {
         verify(secondaryStore, times(1)).fire(1);
-    }
+    }*/
+    verify(primaryStore, times(1)).fire(1);
+    verify(secondaryStore, times(0)).fire(anyInt());
+
   }
 
   @Test
