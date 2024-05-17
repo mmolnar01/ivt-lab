@@ -22,7 +22,7 @@ public class GT4500Test {
   @Test
   public void fireTorpedo_Single_Success(){
     // Arrange
-    when(ship.fireTorpedo(FiringMode.SINGLE)).thenReturn("true");
+    when(ship.fireTorpedo(FiringMode.SINGLE)).thenReturn(true);
     //when(secondaryStore.fire()).thenReturn("true");
 
     // Act
@@ -37,7 +37,7 @@ public class GT4500Test {
   @Test
   public void fireTorpedo_All_Success(){
     // Arrange
-    when(ship.fireTorpedo(FiringMode.ALL)).thenReturn("true");
+    when(ship.fireTorpedo(FiringMode.ALL)).thenReturn(true);
     // Act
     //boolean result = ship.fireTorpedo(FiringMode.ALL);
     ship.fireTorpedo(FiringMode.ALL);
