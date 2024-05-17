@@ -31,8 +31,8 @@ public class GT4500Test {
     ship.fireTorpedo(FiringMode.SINGLE);
 
     // Assert
-    verify(primaryStore, times(1)).fire();
-    verify(secondaryStore, times(1)).fire();
+    verify(primaryStore, times(1)).fire(1);
+    verify(secondaryStore, times(1)).fire(1);
     //assertEquals(true, result);
   }
 
@@ -49,8 +49,8 @@ public class GT4500Test {
     // Assert
     //verify(ship, times(1)).fireTorpedo(FiringMode.ALL);
     //assertEquals(true, result);
-    verify(primaryStore, times(1)).fire();
-    verify(secondaryStore, times(1)).fire();
+    verify(primaryStore, times(1)).fire(1);
+    verify(secondaryStore, times(1)).fire(1);
   }
 
 }
