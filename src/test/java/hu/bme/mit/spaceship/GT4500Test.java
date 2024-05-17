@@ -34,8 +34,6 @@ public class GT4500Test {
     } else {
         verify(secondaryStore, times(1)).fire(1);
     }
-    //verify(primaryStore, times(1)).fire(1);
-    //verify(secondaryStore, times(1)).fire(1);
   }
 
   @Test
