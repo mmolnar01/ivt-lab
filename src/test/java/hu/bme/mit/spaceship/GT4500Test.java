@@ -49,5 +49,17 @@ public class GT4500Test {
     verify(primaryStore, times(1)).fire(1);
     verify(secondaryStore, times(1)).fire(1);
   }
+  
+  @Test
+  public void fireTorpedo_All_Twice() {
+      when(primaryStore.fire(1)).thenReturn(true);
+      when(secondaryStore.fire(1)).thenReturn(true);
+
+      ship.fireTorpedo(FiringMode.ALL);
+      ship.fireTorpedo(FiringMode.ALL);
+
+      verify(primaryStore, times(2)).fire(1);
+      verify(secondaryStore, times(2)).fire(1);
+  }
 
 }
